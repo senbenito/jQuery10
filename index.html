@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GP & Shannon Explain JQuery</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style media="screen">
+  .fyi{
+    color: yellow;
+    font-size: x-small;
+  }
+  body{
+    text-align: left;
+    background-image: url("http://cdn.now.howstuffworks.com/media-content/KmNPnL0g-monkeywheelchair_realmonkeyjpg-1920-1080.jpg");
+    /*background-size: contain;*/
+  }
+  .container{
+    background-color: rgba(0,0,0,.6);
+    color: white;
+  }
+  button{
+  background-color: aqua;
+    color: black;
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Here's our JQuery snippet</h1>
+    <p><button>$("#content").find("h3").eq(2).text("monkeys!");</button></p>
+
+    <h2>But... what does it <i>MEAN</i>?!?!?!?!?!?</h2>
+    <ol>
+      <li><button>$("#content")</button>
+        <ul>
+          <li>vanilla JavaScript: <button>document.getElementById('content')</button></li>
+          <li>Dev-Speak: <button>on the document, find the element with id 'content'</button></li>
+        </ul>
+      </li>
+      <li><button>.find("h3")</button></li>
+        <ul>
+          <li> vanilla JavaScript: <button>.getElementsByTagNames('h3')</button></li>
+          <li>Dev-Speak: <button>find the all the h3 tags</button></li>
+        </ul>
+        <li><button>.eq(2)</button></li>
+          <ul>
+            <li> vanilla JavaScript: <button>array[2]</button></li>
+            <li>Dev-Speak: <button>find the element at index #2</button></li>
+          </ul>
+        <li><button>.text("monkeys!")</button></li>
+          <ul>
+            <li> vanilla JavaScript: <button>.innerText("monkeys!")</button></li>
+            <li>Dev-Speak: <button>add/replace the text, "monkeys!"</button></li>
+          </ul>
+
+    </ol>
+
+  <h2>Let's see this in action, boyos:</h2>
+    <div id="content"> <span class="fyi">FYI: we're in [div id="content"]</span>
+      <h3>Header 1 <span class="fyi">FYI: we're in the first [h3]</span></h3>
+      <h3>Header 2 <span class="fyi">FYI: we're in the second [h3]</span></h3>
+      <h3>Header 3 <span class="fyi">FYI: we're in the third [h3]</span></h3>
+    </div>
+    <p><button id="jQueryCodeBtn">Click to run: $("#content").find("h3").eq(2).text("monkeys!");</button></p>
+
+
+<h1>What if _____</h1>
+  <h2>Aight, genii (the plural of <a href="https://english.stackexchange.com/questions/258692/in-what-context-is-the-plural-of-genius-genii-acceptable-to-use-in-a-sentence">genius</a>), what if there is only one element that matches the selector?</h2>
+  <h3>That's WINNING.</h3>
+
+  <h2>What if there's more than one match?</h2>
+  <h3>
+    <ul>
+      <li>1. There can't be because: index number, </li>
+      <li>2. if you left that part of the code out, all h3 tags in the content div will now say "monkeys!"</li>
+    </ul>
+    </h3>
+  <button id="noEq2Btn">Click here to see what that would look like</button>
+
+  <h1>Would you like to slay JQuery like the Dawn Patrol?</h1>
+  <h2><a href="https://oscarotero.com/jquery/">BOOM.</a></h2>
+</div>
+
+<footer>
+  &#64; Da Dawn Patrol, [g49] <br>
+  <span class="fyi">(aka, GP! and shannon)</span>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
